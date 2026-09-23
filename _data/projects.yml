@@ -25,19 +25,14 @@
     built to improve cervical range of motion. Tested with 40 healthy
     participants and then in a feasibility study with four outpatients living
     with cervical dystonia.
-  cover: "vr-neck/cover.svg"
-  alt: "Placeholder image for the VR neck rehabilitation project"
+  cover: "vr-neck/vr_env.png"
+  alt: "Virtual environment of a neck-stretching game"
   tags: ["C#", "Unity", "VR", "Clinical study"]
-  gallery:
-    - src: "vr-neck/cover.svg"
-      alt: "Placeholder image"
-      caption: "Replace these placeholders with your own screenshots."
-    - src: "vr-neck/02.svg"
-      alt: "Placeholder image"
-      caption: "A second image — gameplay, setup, or a participant session."
-  link:
-    label: "EMBC 2025 paper"
-    url: "https://doi.org/10.1109/EMBC58623.2025.11253550"
+  links:
+    - label: "EMBC 2025 paper"
+      url: "https://doi.org/10.1109/EMBC58623.2025.11253550"
+    - label: "UG news article"
+      url: "https://www.rug.nl/about-ug/latest-news/news/archief2026/nieuwsberichten/0330-makerswilhelm?lang=en"
 
 - title: "E-SPPB — functional assessment device"
   year: "2017 — 2020"
