@@ -1,0 +1,26 @@
+{%- assign s = site.data.skills -%}
+<section class="section" id="skills">
+  <div class="wrap">
+    <h2 class="band">Skills &amp; Tools</h2>
+
+    <div class="skills">
+      {%- for group in s.groups %}
+      <div class="skills__group">
+        <h3 class="skills__name">{{ group.name }}</h3>
+        <ul class="chips">
+          {%- for item in group.items %}
+          <li class="chip">{{ item }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+
+    {%- if s.certifications and s.certifications.size > 0 %}
+    <p class="skills__certs">
+      <strong>Certifications:</strong>
+      {{ s.certifications | join: " · " }}
+    </p>
+    {%- endif %}
+  </div>
+</section>

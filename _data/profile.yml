@@ -1,0 +1,32 @@
+# Header / hero -------------------------------------------------------------
+name: "Luis Felipe García Arias"
+role: "Engineer — electronics, signal processing and rehabilitation technology"
+location: "Groningen, The Netherlands"
+
+# soft-wraps them for you (see .vscode/settings.json).
+about:
+  - >-
+    I am an engineer with a research background in electronics, signal processing and software development. I have taken prototypes from an early concept through circuit and mechanical design all the way to field testing with real users.
+  - >-
+    I adapt quickly to what a project actually needs. That has meant PCB design, mechanical design and firmware on one project, and DevOps, VR and game development in C#, or signal processing and machine learning on the next.
+  - >-
+    I am currently looking for a position driven by innovation and focused on improving people’s lives through technology, a goal that has guided my research in rehabilitation and assistive devices.
+
+# Links shown under the name and in the footer.
+# `primary: true` puts the link in the header line.
+links:
+  - label: "feligar14@gmail.com"
+    url: "mailto:feligar14@gmail.com"
+    primary: true
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/luis-felipe-garc%C3%ADa-arias-606047245/"
+    primary: true
+  - label: "ORCID"
+    url: "https://orcid.org/0000-0003-4726-492X"
+    primary: true
+  - label: "ResearchGate"
+    url: "https://www.researchgate.net/profile/Luis-Garcia-Arias"
+    primary: true
+  - label: "GitHub"
+    url: "https://github.com/feligar14"
+    primary: true

@@ -1,0 +1,17 @@
+{%- assign p = site.data.profile -%}
+<section class="section" id="contact">
+  <div class="wrap">
+    <h2 class="band">Contact</h2>
+    <div class="contact">
+      <p class="contact__lede">
+        Open to roles where engineering meets healthcare and assistive
+        technology. The quickest way to reach me is by email.
+      </p>
+      <ul class="contact__list">
+        {%- for l in p.links %}
+        <li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

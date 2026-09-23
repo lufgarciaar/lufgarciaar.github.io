@@ -1,0 +1,50 @@
+# Each group renders as a heading plus a row of chips.
+# Add, remove or reorder freely — the layout adapts.
+groups:
+  - name: "Engineering & prototyping"
+    items:
+      - "Rapid prototyping"
+      - "Hardware–software integration"
+      - "Code review & Git workflows"
+      - "PCB design"
+      - "Mechanical design & 3D printing"
+      - "Embedded firmware"
+      - "Sensor systems (EMG, IMU)"
+
+  - name: "Software"
+    items:
+      - "C++"
+      - "C#"
+      - "Python"
+      - "MATLAB"
+      - "Unity"
+      - "Unit testing"
+
+  - name: "Tools"
+    items:
+      - "Git"
+      - "Linux"
+      - "Docker"
+      - "Altium Designer"
+      - "KiCAD"
+      - "SolidWorks"
+      - "PyTorch"
+
+  - name: "Research & collaboration"
+    items:
+      - "Field & user testing with patients"
+      - "Clinical study protocols (WMO / non-WMO, METc)"
+      - "Risk assessment"
+      - "Technical project leadership"
+      - "Engineering–clinical collaboration"
+      - "Scientific writing & patenting"
+
+  - name: "Languages"
+    items:
+      - "Spanish — native"
+      - "English — C1 (TOEFL iBT)"
+      - "Portuguese — B2 (CELPE-Bras)"
+      - "Dutch — A2"
+
+certifications:
+  - "Certified SOLIDWORKS Professional — Core (2016)"

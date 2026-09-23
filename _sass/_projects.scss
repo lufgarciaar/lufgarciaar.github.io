@@ -1,0 +1,197 @@
+// ---------------------------------------------------------------------------
+//  Project grid
+// ---------------------------------------------------------------------------
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+
+  @include up($bp-md) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @include up($bp-lg) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--c-surface);
+  border: 1px solid var(--c-rule);
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: 0 1px 2px var(--c-shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+              border-color 0.18s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px var(--c-shadow-lift);
+    border-color: var(--c-accent);
+  }
+
+  // --- Cover image ---------------------------------------------------------
+
+  &__media {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    // A fixed ratio keeps the grid tidy even with mixed source images.
+    aspect-ratio: 3 / 2;
+    background: var(--c-accent-soft);
+    overflow: hidden;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    &--button {
+      cursor: zoom-in;
+      font: inherit;
+      color: inherit;
+    }
+  }
+
+  &:hover &__media--button img { transform: scale(1.04); }
+
+  // Photo-count badge, shown only when a gallery exists.
+  &__count {
+    position: absolute;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 100px;
+    background: rgba(27, 42, 74, 0.82);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+
+    svg {
+      width: 0.85rem;
+      height: 0.85rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linejoin: round;
+    }
+  }
+
+  // --- Text ----------------------------------------------------------------
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.15rem 1.25rem 1.25rem;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  &__year {
+    margin: 0 0 0.7rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--c-muted);
+  }
+
+  &__summary {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--c-text);
+  }
+
+  &__link {
+    margin: 0.9rem 0 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+
+  &__arrow {
+    width: 0.95rem;
+    height: 0.95rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.16s ease;
+  }
+
+  &__link a:hover &__arrow { transform: translateX(3px); }
+
+  &__tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    // Pushed to the bottom so tag rows line up across a row of cards.
+    margin: 1.1rem 0 0;
+    padding: 0.9rem 0 0;
+    border-top: 1px solid var(--c-rule);
+    margin-top: auto;
+
+    li {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--c-chip-text);
+      background: var(--c-chip-bg);
+      border-radius: 4px;
+      padding: 0.15rem 0.45rem;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+//  Contact
+// ---------------------------------------------------------------------------
+
+.contact {
+  &__lede {
+    max-width: 40em;
+    margin: 0 0 1.5rem;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+
+    a {
+      display: inline-block;
+      padding: 0.45rem 0.95rem;
+      border: 1px solid var(--c-rule);
+      border-radius: $radius;
+      background: var(--c-surface);
+      font-size: 0.93rem;
+      font-weight: 600;
+
+      &:hover {
+        border-color: var(--c-accent);
+        background: var(--c-accent-soft);
+        border-bottom-width: 1px;
+      }
+    }
+  }
+}

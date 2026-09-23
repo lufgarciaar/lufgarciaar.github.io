@@ -1,0 +1,74 @@
+# ---------------------------------------------------------------------------
+#  Projects
+# ---------------------------------------------------------------------------
+#  Each entry becomes one card in the grid. Fields:
+#
+#    title       required
+#    year        optional, shown next to the title
+#    summary     required
+#    cover       required, path under assets/img/projects/
+#    alt         required, describes the cover image for screen readers
+#    tags        optional list, small chips at the bottom of the card
+#    gallery     optional list of {src, alt, caption} — opens in the lightbox.
+#                Omit it (or leave one image) and the card is not clickable.
+#    link        optional {label, url} — a DOI, repo, paper or demo
+#
+#  Images: ~1200px wide, 3:2 works best. Anything is accepted; cards crop
+#  to a consistent ratio so a mixed set still looks tidy.
+# ---------------------------------------------------------------------------
+
+- title: "VR neck-stretching rehabilitation"
+  year: "2023 — 2025"
+  summary: >-
+    A virtual-reality game that turns neck stretching exercises into gameplay,
+    built to improve cervical range of motion. Tested with 40 healthy
+    participants and then in a feasibility study with four outpatients living
+    with cervical dystonia.
+  cover: "vr-neck/cover.svg"
+  alt: "Placeholder image for the VR neck rehabilitation project"
+  tags: ["C#", "Unity", "VR", "Clinical study"]
+  gallery:
+    - src: "vr-neck/cover.svg"
+      alt: "Placeholder image"
+      caption: "Replace these placeholders with your own screenshots."
+    - src: "vr-neck/02.svg"
+      alt: "Placeholder image"
+      caption: "A second image — gameplay, setup, or a participant session."
+  link:
+    label: "EMBC 2025 paper"
+    url: "https://doi.org/10.1109/EMBC58623.2025.11253550"
+
+- title: "E-SPPB — functional assessment device"
+  year: "2017 — 2020"
+  summary: >-
+    An electronic system that assists physicians in measuring functional
+    performance tests in elderly patients. I worked on the electronics design,
+    the 3D-printed enclosures, and the firmware and integration code. Tested
+    with 400 participants across four subregions of Caldas, Colombia, and
+    granted a utility model patent.
+  cover: "e-sppb/cover.svg"
+  alt: "Placeholder image for the E-SPPB device project"
+  tags: ["C++", "Python", "Altium", "SolidWorks", "Patent"]
+  gallery:
+    - src: "e-sppb/cover.svg"
+      alt: "Placeholder image"
+      caption: "Replace with a photo of the assembled device."
+    - src: "e-sppb/02.svg"
+      alt: "Placeholder image"
+      caption: "PCB, enclosure, or a field-testing session."
+    - src: "e-sppb/03.svg"
+      alt: "Placeholder image"
+      caption: "This project is a good candidate for several photos."
+
+- title: "IMU-Mouse — assistive pointing device"
+  year: "2018"
+  summary: >-
+    A head-worn pointing device built around an IMU, designed to give people
+    with physical disabilities access to adaptive computer interfaces.
+  cover: "imu-mouse/cover.svg"
+  alt: "Placeholder image for the IMU-Mouse project"
+  tags: ["Embedded", "Assistive tech", "HCI"]
+  link:
+    label: "Read the paper"
+    url: "https://doi.org/10.22430/22565337.727"
+

@@ -1,0 +1,30 @@
+# ---------------------------------------------------------------------------
+#  Site settings
+# ---------------------------------------------------------------------------
+title: "Luis Felipe García Arias"
+tagline: "Engineer — electronics, signal processing and rehabilitation technology"
+description: >-
+  Portfolio of Luis Felipe García Arias: engineer and doctoral researcher
+  working on electronics, signal processing and movement-based interactive
+  systems for rehabilitation.
+url: "https://lufgarciaar.github.io"
+baseurl: ""
+lang: en
+
+# ---------------------------------------------------------------------------
+#  Build
+# ---------------------------------------------------------------------------
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Dark mode: set to false to ship a light-only site (see README).
+dark_mode: true
+
+theme: null

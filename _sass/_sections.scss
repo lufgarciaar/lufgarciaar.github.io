@@ -1,0 +1,28 @@
+// ---------------------------------------------------------------------------
+//  Section rhythm and body copy
+// ---------------------------------------------------------------------------
+
+.section {
+  padding: 3.25rem 0;
+
+  @include up($bp-md) { padding: 4.25rem 0; }
+
+  // Alternating tint keeps long scrolls legible without extra rules.
+  &:nth-of-type(even) { background: var(--c-bg-alt); }
+
+  &__lede {
+    max-width: 46em;
+    margin: -0.5rem 0 2rem;
+    color: var(--c-muted);
+  }
+}
+
+.prose {
+  max-width: 44em;
+
+  p {
+    margin: 0 0 1.15rem;
+
+    &:last-child { margin-bottom: 0; }
+  }
+}

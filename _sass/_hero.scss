@@ -1,0 +1,50 @@
+// ---------------------------------------------------------------------------
+//  Header block — mirrors the CV's own header
+// ---------------------------------------------------------------------------
+
+.hero {
+  padding: 4rem 0 2.5rem;
+  border-bottom: 1px solid var(--c-rule);
+
+  @include up($bp-md) { padding: 6rem 0 3.5rem; }
+
+  &__name {
+    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    letter-spacing: -0.015em;
+    margin-bottom: 0.9rem;
+
+    // The short rule under the name echoes the CV's hairlines.
+    &::after {
+      content: "";
+      display: block;
+      width: 3.25rem;
+      height: 3px;
+      margin-top: 0.9rem;
+      background: var(--c-accent);
+      border-radius: 2px;
+    }
+  }
+
+  &__role {
+    margin: 0 0 1.1rem;
+    max-width: 34em;
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    color: var(--c-muted);
+  }
+
+  &__meta {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--c-muted);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+
+    .sep { color: var(--c-rule); }
+  }
+
+  &__location { font-weight: 600; color: var(--c-text); }
+
+  &__cta { margin: 1.75rem 0 0; }
+}

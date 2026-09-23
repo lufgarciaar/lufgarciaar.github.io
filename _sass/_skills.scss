@@ -1,0 +1,51 @@
+// ---------------------------------------------------------------------------
+//  Skills & tools
+// ---------------------------------------------------------------------------
+
+.skills {
+  display: grid;
+  gap: 1.75rem 2.5rem;
+
+  @include up($bp-md) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  &__name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--c-rule);
+  }
+
+  &__certs {
+    margin: 2.25rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--c-rule);
+    font-size: 0.95rem;
+    color: var(--c-muted);
+
+    strong { color: var(--c-text); }
+  }
+}
+
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  background: var(--c-chip-bg);
+  color: var(--c-chip-text);
+  border: 1px solid var(--c-rule);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.45;
+}

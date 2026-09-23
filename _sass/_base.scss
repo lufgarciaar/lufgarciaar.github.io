@@ -1,0 +1,129 @@
+// ---------------------------------------------------------------------------
+//  Reset, theme wiring, typography, shared primitives
+// ---------------------------------------------------------------------------
+
+:root { @include light-tokens; }
+
+// System preference, unless the visitor has explicitly chosen light.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include dark-tokens; }
+}
+
+// Explicit choice always wins.
+:root[data-theme="dark"]  { @include dark-tokens; }
+:root[data-theme="light"] { @include light-tokens; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  // Offset for the sticky header when jumping to an anchor.
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: $font-stack;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--c-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.16s ease, border-color 0.16s ease;
+
+  &:hover { border-bottom-color: currentColor; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 {
+  color: var(--c-heading);
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 700;
+}
+
+// --- Layout primitives -----------------------------------------------------
+
+.wrap {
+  width: 100%;
+  max-width: $wrap;
+  margin-inline: auto;
+  padding-inline: $gutter-sm;
+
+  @include up($bp-md) { padding-inline: $gutter; }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  padding: 0.6rem 1rem;
+  background: var(--c-heading);
+  color: #fff;
+  border-radius: 0 0 $radius 0;
+
+  &:focus { left: 0; }
+}
+
+// --- Section band ----------------------------------------------------------
+// The CV sets section headings on a full-width tinted rectangle
+// (\colorbox{bandtint}). This is the same device in CSS.
+
+.band {
+  background: var(--c-band-bg);
+  color: var(--c-band-text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+
+  @include up($bp-md) { font-size: 1.15rem; }
+}
+
+// --- Buttons ---------------------------------------------------------------
+
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1.15rem;
+  border: 1px solid var(--c-rule);
+  border-radius: $radius;
+  background: var(--c-surface);
+  color: var(--c-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.16s ease, border-color 0.16s ease,
+              transform 0.16s ease;
+
+  &:hover {
+    background: var(--c-accent-soft);
+    border-color: var(--c-accent);
+    transform: translateY(-1px);
+  }
+}

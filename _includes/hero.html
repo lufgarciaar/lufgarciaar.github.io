@@ -1,0 +1,18 @@
+{%- assign p = site.data.profile -%}
+<section class="hero">
+  <div class="wrap">
+    <h1 class="hero__name">{{ p.name }}</h1>
+    <p class="hero__role">{{ p.role }}</p>
+    <p class="hero__meta">
+      <span class="hero__location">{{ p.location }}</span>
+      {%- for l in p.links -%}
+        {%- if l.primary %}<span class="sep" aria-hidden="true">·</span><a href="{{ l.url }}">{{ l.label }}</a>{% endif -%}
+      {%- endfor -%}
+    </p>
+    {%- if p.cv_url %}
+    <p class="hero__cta">
+      <a class="btn" href="{{ p.cv_url | relative_url }}">Download CV (PDF)</a>
+    </p>
+    {%- endif %}
+  </div>
+</section>

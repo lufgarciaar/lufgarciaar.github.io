@@ -1,0 +1,40 @@
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true"
+     aria-label="Project images" hidden>
+  <div class="lightbox__backdrop" data-close></div>
+
+  <div class="lightbox__frame">
+    <header class="lightbox__bar">
+      <h2 class="lightbox__title" id="lightbox-title"></h2>
+      <button class="lightbox__close" type="button" data-close aria-label="Close gallery (Esc)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </header>
+
+    <div class="lightbox__stage">
+      <button class="lightbox__nav lightbox__nav--prev" type="button"
+              data-prev aria-label="Previous image (left arrow)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15 5l-7 7 7 7"/>
+        </svg>
+      </button>
+
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" id="lightbox-img" src="" alt="">
+      </figure>
+
+      <button class="lightbox__nav lightbox__nav--next" type="button"
+              data-next aria-label="Next image (right arrow)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <footer class="lightbox__bottom">
+      <p class="lightbox__caption" id="lightbox-caption"></p>
+      <p class="lightbox__counter" id="lightbox-counter" aria-live="polite"></p>
+    </footer>
+  </div>
+</div>

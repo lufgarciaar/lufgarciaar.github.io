@@ -1,0 +1,134 @@
+// ---------------------------------------------------------------------------
+//  Sticky header
+// ---------------------------------------------------------------------------
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--c-nav-bg);
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--c-rule);
+
+  &__inner {
+    width: 100%;
+    max-width: $wrap;
+    margin-inline: auto;
+    padding: 0.6rem $gutter-sm;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include up($bp-md) { padding-inline: $gutter; }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--c-heading);
+    font-weight: 700;
+    border-bottom: 0;
+    flex-shrink: 0;
+
+    &:hover { border-bottom: 0; }
+  }
+
+  &__mark {
+    display: grid;
+    place-items: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 4px;
+    background: var(--c-heading);
+    color: var(--c-bg);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+
+  &__brand-text {
+    font-size: 0.95rem;
+    white-space: nowrap;
+
+    // The monogram alone carries the brand on small screens.
+    @include down($bp-md) { display: none; }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-left: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar { display: none; }
+
+    a {
+      padding: 0.35rem 0.6rem;
+      border-radius: $radius;
+      border-bottom: 0;
+      color: var(--c-muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: color 0.16s ease, background 0.16s ease;
+
+      &:hover { color: var(--c-heading); background: var(--c-accent-soft); border-bottom: 0; }
+
+      // Set by the scroll spy in assets/js/main.js
+      &.is-active { color: var(--c-heading); background: var(--c-accent-soft); }
+    }
+  }
+
+  &__theme {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    padding: 0;
+    border: 1px solid var(--c-rule);
+    border-radius: $radius;
+    background: transparent;
+    color: var(--c-muted);
+    cursor: pointer;
+    transition: color 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+
+    &:hover {
+      color: var(--c-heading);
+      border-color: var(--c-accent);
+      background: var(--c-accent-soft);
+    }
+
+    svg {
+      width: 1.05rem;
+      height: 1.05rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+    }
+  }
+}
+
+// Show the icon for the theme the button switches *to*.
+.icon-moon { display: block; }
+.icon-sun  { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    .icon-moon { display: none; }
+    .icon-sun  { display: block; }
+  }
+}
+
+:root[data-theme="dark"] {
+  .icon-moon { display: none; }
+  .icon-sun  { display: block; }
+}
+
+:root[data-theme="light"] {
+  .icon-moon { display: block; }
+  .icon-sun  { display: none; }
+}

@@ -1,0 +1,78 @@
+// ---------------------------------------------------------------------------
+//  Design tokens
+//
+//  Colours come straight from the LaTeX CV (FelipeGarcia_CV.tex) so the site
+//  and the PDF read as one document:
+//
+//    titleblue    #1B2A4A   headings
+//    subtitleblue #3B4C6B   subheadings, links
+//    darktext     #222222   body copy
+//    ruleline     #C9CDD6   hairlines
+//    bandtint     #E9EDF4   section bands
+// ---------------------------------------------------------------------------
+
+// --- Source palette --------------------------------------------------------
+$navy:      #1B2A4A;
+$slate:     #3B4C6B;
+$ink:       #222222;
+$rule:      #C9CDD6;
+$band:      #E9EDF4;
+
+// --- Scale -----------------------------------------------------------------
+$wrap:        62rem;   // ~992px content column
+$gutter:      1.5rem;
+$gutter-sm:   1rem;
+$radius:      6px;
+$radius-lg:   10px;
+
+$font-stack:  "Source Sans 3", "Source Sans Pro", -apple-system,
+              BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+
+// --- Breakpoints -----------------------------------------------------------
+$bp-md: 760px;
+$bp-lg: 1000px;
+
+@mixin up($bp)   { @media (min-width: $bp) { @content; } }
+@mixin down($bp) { @media (max-width: $bp - 1px) { @content; } }
+
+// --- Theme tokens ----------------------------------------------------------
+// Declared as custom properties so the dark theme is a token swap and
+// nothing downstream has to know which theme is active.
+
+@mixin light-tokens {
+  --c-bg:          #ffffff;
+  --c-bg-alt:      #fafbfc;
+  --c-surface:     #ffffff;
+  --c-text:        #{$ink};
+  --c-heading:     #{$navy};
+  --c-muted:       #5c6880;
+  --c-accent:      #{$slate};
+  --c-accent-soft: #{$band};
+  --c-rule:        #{$rule};
+  --c-band-bg:     #{$band};
+  --c-band-text:   #{$navy};
+  --c-chip-bg:     #f2f5fa;
+  --c-chip-text:   #{$slate};
+  --c-shadow:      rgba(27, 42, 74, 0.09);
+  --c-shadow-lift: rgba(27, 42, 74, 0.16);
+  --c-nav-bg:      rgba(255, 255, 255, 0.88);
+}
+
+@mixin dark-tokens {
+  --c-bg:          #10172a;
+  --c-bg-alt:      #131c33;
+  --c-surface:     #172138;
+  --c-text:        #dbe2ef;
+  --c-heading:     #eaf0fb;
+  --c-muted:       #94a3bf;
+  --c-accent:      #9db5da;
+  --c-accent-soft: #1e2b47;
+  --c-rule:        #2a3654;
+  --c-band-bg:     #1c2743;
+  --c-band-text:   #dce5f5;
+  --c-chip-bg:     #1c2741;
+  --c-chip-text:   #b6c6e2;
+  --c-shadow:      rgba(0, 0, 0, 0.36);
+  --c-shadow-lift: rgba(0, 0, 0, 0.52);
+  --c-nav-bg:      rgba(16, 23, 42, 0.86);
+}

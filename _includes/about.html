@@ -1,0 +1,10 @@
+<section class="section" id="about">
+  <div class="wrap">
+    <h2 class="band">About</h2>
+    <div class="prose">
+      {%- for para in site.data.profile.about %}
+      <p>{{ para }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">
+      <span class="nav__mark">LF</span>
+      <span class="nav__brand-text">{{ site.title }}</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#skills">Skills &amp; Tools</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    {%- if site.dark_mode %}
+    <button class="nav__theme" id="theme-toggle" type="button"
+            aria-label="Switch colour theme" title="Switch colour theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="4.2"/>
+        <g stroke-linecap="round">
+          <path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4"/>
+          <path d="M5.2 5.2l1.7 1.7M17.1 17.1l1.7 1.7M18.8 5.2l-1.7 1.7M6.9 17.1l-1.7 1.7"/>
+        </g>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2z"/>
+      </svg>
+    </button>
+    {%- endif %}
+  </div>
+</header>

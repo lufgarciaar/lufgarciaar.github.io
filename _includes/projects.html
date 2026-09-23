@@ -1,0 +1,76 @@
+{%- assign imgbase = '/assets/img/projects/' -%}
+<section class="section" id="projects">
+  <div class="wrap">
+    <h2 class="band">Projects</h2>
+    <p class="section__lede">
+      A selection of things I have designed, built and tested — from circuit
+      boards and enclosures to games, signal-processing pipelines and web
+      platforms.
+    </p>
+
+    <div class="cards">
+      {%- for project in site.data.projects %}
+      {%- assign gsize = project.gallery | size -%}
+      <article class="card">
+
+        {%- if gsize > 1 %}
+        <button class="card__media card__media--button"
+                type="button"
+                data-gallery
+                data-title="{{ project.title | escape }}"
+                aria-label="Open image gallery for {{ project.title | escape }} ({{ gsize }} images)">
+          <img src="{{ imgbase | append: project.cover | relative_url }}"
+               alt="{{ project.alt | escape }}" loading="lazy" decoding="async">
+          <span class="card__count" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <rect x="3" y="6" width="14" height="12" rx="1.6"/>
+              <path d="M7 3.5h12.5a1 1 0 0 1 1 1V17"/>
+            </svg>
+            {{ gsize }}
+          </span>
+          <span class="card__gallery-data" hidden>
+            {%- for img in project.gallery %}
+            <span data-src="{{ imgbase | append: img.src | relative_url }}"
+                  data-alt="{{ img.alt | escape }}"
+                  data-caption="{{ img.caption | default: '' | escape }}"></span>
+            {%- endfor %}
+          </span>
+        </button>
+        {%- else %}
+        <div class="card__media">
+          <img src="{{ imgbase | append: project.cover | relative_url }}"
+               alt="{{ project.alt | escape }}" loading="lazy" decoding="async">
+        </div>
+        {%- endif %}
+
+        <div class="card__body">
+          <h3 class="card__title">{{ project.title }}</h3>
+          {%- if project.year %}
+          <p class="card__year">{{ project.year }}</p>
+          {%- endif %}
+          <p class="card__summary">{{ project.summary }}</p>
+
+          {%- if project.link %}
+          <p class="card__link">
+            <a href="{{ project.link.url }}" rel="noopener">
+              {{ project.link.label }}
+              <svg class="card__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h13M12.5 5.5L19 12l-6.5 6.5"/>
+              </svg>
+            </a>
+          </p>
+          {%- endif %}
+
+          {%- if project.tags %}
+          <ul class="card__tags">
+            {%- for tag in project.tags %}
+            <li>{{ tag }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
