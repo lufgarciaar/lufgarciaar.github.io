@@ -7,6 +7,8 @@ groups:
       - "Hardware–software integration"
       - "Code review & Git workflows"
       - "PCB design"
+      - "Circuit design"
+      - "Electronics debugging"
       - "Mechanical design & 3D printing"
       - "Embedded firmware"
       - "Sensor systems (EMG, IMU)"
