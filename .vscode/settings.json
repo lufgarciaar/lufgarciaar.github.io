@@ -1,0 +1,10 @@
+{
+  // Enable soft wrapping of one-line paragraphs of .yml files.
+  "[yaml]": {
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "same",
+    "editor.tabSize": 2
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true
+}
