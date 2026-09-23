@@ -30,3 +30,6 @@ links:
   - label: "GitHub"
     url: "https://github.com/feligar14"
     primary: true
+
+# Downloadable CV.
+cv_url: "/assets/GarciaArias_LuisFelipe_CV.pdf"
