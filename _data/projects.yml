@@ -59,6 +59,21 @@
       alt: "Shows PCBs inside enclosures"
       caption: "Assembly process with 3D-printed enclosures."
 
+- title: "Electronics designed for an EMG hand prosthesis — Cybathlon 2024"
+  year: "2024"
+  summary: >-
+    I developed the electronics to collect the signals from the sensors in the fingers and a power circuit board to deliver 12 V to the DC motors from the 7.4 V (nominal) of the batteries. The prosthesis was used by the team of the University of Groningen in the Cybathlon competition of 2024. This edition was organized by ETH Zurich in the Swiss Arena.
+  cover: "cybathlon/cybathlon_power_debug.png"
+  alt: "Power electronics board for the hand prosthesis, on a lab bench during debugging"
+  tags: ["KiCAD", "Circuit design", "Electronics debugging"]
+  gallery:
+    - src: "cybathlon/cybathlon_power_debug.png"
+      alt: "Power electronics board for the hand prosthesis, on a lab bench during debugging"
+      caption: "Debug of power electronics for motor steering."
+    - src: "cybathlon/cybathlon_sensors_debug.jpg"
+      alt: "Socket and hand testing in the laboratory"
+      caption: "Debug of EMG recording board in the socket and communication with the board in the hand."
+
 - title: "Assistive technologies for human-computer interaction"
   year: "2020 — 2021"
   summary: >-
