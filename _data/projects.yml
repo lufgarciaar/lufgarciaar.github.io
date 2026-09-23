@@ -11,7 +11,8 @@
 #    tags        optional list, small chips at the bottom of the card
 #    gallery     optional list of {src, alt, caption} — opens in the lightbox.
 #                Omit it (or leave one image) and the card is not clickable.
-#    link        optional {label, url} — a DOI, repo, paper or demo
+#    links       optional list of {label, url} — DOIs, papers, repos, demos,
+#                press coverage... one or as many as apply, each on its own line
 #
 #  Images: ~1200px wide, 3:2 works best. Anything is accepted; cards crop
 #  to a consistent ratio so a mixed set still looks tidy.
@@ -90,7 +91,7 @@
     - src: "assistive_tech/at_built_keyboards.jpg"
       alt: "Different configurations of a keyboard"
       caption: "Configurations of an in-house developed keyboard."
-  link:
-    label: "Read the paper"
-    url: "https://doi.org/10.22430/22565337.727"
+  links:
+    - label: "Read the paper"
+      url: "https://doi.org/10.22430/22565337.727"
 
