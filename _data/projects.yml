@@ -10,7 +10,7 @@
 #    alt         required, describes the cover image for screen readers
 #    tags        optional list, small chips at the bottom of the card
 #    gallery     optional list of {src, alt, caption} — opens in the lightbox.
-#                Omit it (or leave one image) and the card is not clickable.
+#                Needs at least 2 entries to do anything.
 #    links       optional list of {label, url} — DOIs, papers, repos, demos,
 #                press coverage... one or as many as apply, each on its own line
 #
@@ -28,6 +28,13 @@
   cover: "vr-neck/vr_env.png"
   alt: "Virtual environment of a neck-stretching game"
   tags: ["C#", "Unity", "VR", "Clinical study"]
+  gallery:
+    - src: "vr-neck/vr_env.png"
+      alt: "Virtual environment of a neck-stretching game"
+      caption: "In-game view of the neck-stretching exercise."
+    - src: "vr-neck/vr_pc.jpg"
+      alt: "Setup for game testing"
+      caption: "VR headset and gaming PC rendering the game."
   links:
     - label: "EMBC 2025 paper"
       url: "https://doi.org/10.1109/EMBC58623.2025.11253550"
