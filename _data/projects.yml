@@ -63,14 +63,33 @@
       alt: "Shows PCBs inside enclosures"
       caption: "Assembly process with 3D-printed enclosures."
 
-- title: "IMU-Mouse — assistive pointing device"
-  year: "2018"
+- title: "Assistive technologies for human-computer interaction"
+  year: "2020 — 2021"
   summary: >-
     A head-worn pointing device built around an IMU, designed to give people
     with physical disabilities access to adaptive computer interfaces.
-  cover: "imu-mouse/cover.jpg"
-  alt: "Placeholder image for the IMU-Mouse project"
+  cover: "assistive_tech/at_field_01.jpg"
+  alt: "Field test of a pointing device"
   tags: ["Embedded", "Assistive tech", "HCI"]
+  gallery:
+    - src: "assistive_tech/at_keyb_iterations.jpg"
+      alt: "Printed button samples in flexible filament"
+      caption: "Print tests of button designs, using flexible filament."
+    - src: "assistive_tech/at_field_02.jpg"
+      alt: "User testing a customized mouse"
+      caption: "Field test of a customized mouse."
+    - src: "assistive_tech/at_hockey_mouse_01.jpg"
+      alt: "Rendered view of the mouse assembly"
+      caption: "Mechanical design of a mouse for a user with reduced mobility."
+    - src: "assistive_tech/at_hockey_mouse_02.jpg"
+      alt: "Exploded view of the mouse assembly"
+      caption: "Exploded view of the same assembly, showing the individual components."
+    - src: "assistive_tech/at_sw_render.jpg"
+      alt: "Rendered view of a keyboard"
+      caption: "SolidWorks assembly of a customized keyboard for a user with reduced mobility."
+    - src: "assistive_tech/at_built_keyboards.jpg"
+      alt: "Different configurations of a keyboard"
+      caption: "Configurations of an in-house developed keyboard."
   link:
     label: "Read the paper"
     url: "https://doi.org/10.22430/22565337.727"
