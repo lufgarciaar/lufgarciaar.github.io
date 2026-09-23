@@ -46,26 +46,29 @@
     the 3D-printed enclosures, and the firmware and integration code. Tested
     with 400 participants across four subregions of Caldas, Colombia, and
     granted a utility model patent.
-  cover: "e-sppb/cover.svg"
+  cover: "e-sppb/e_sppb_cover.jpg"
   alt: "Placeholder image for the E-SPPB device project"
   tags: ["C++", "Python", "Altium", "SolidWorks", "Patent"]
   gallery:
-    - src: "e-sppb/cover.svg"
-      alt: "Placeholder image"
-      caption: "Replace with a photo of the assembled device."
-    - src: "e-sppb/02.svg"
-      alt: "Placeholder image"
-      caption: "PCB, enclosure, or a field-testing session."
-    - src: "e-sppb/03.svg"
-      alt: "Placeholder image"
-      caption: "This project is a good candidate for several photos."
+    - src: "e-sppb/e_sppb_cover.jpg"
+      alt: "Set of devices for functional assessment"
+      caption: "Set of devices for functional assessment."
+    - src: "e-sppb/e_sppb_01.jpg"
+      alt: "PCB and stencil"
+      caption: "PCB and stencil"
+    - src: "e-sppb/02.jpg"
+      alt: "Person assemblying PCB"
+      caption: "Putting my eyes on a hard test while placing components"
+    - src: "e-sppb/03.jpg"
+      alt: "Shows PCBs inside enclosures"
+      caption: "Assembly process with 3D-printed enclosures."
 
 - title: "IMU-Mouse — assistive pointing device"
   year: "2018"
   summary: >-
     A head-worn pointing device built around an IMU, designed to give people
     with physical disabilities access to adaptive computer interfaces.
-  cover: "imu-mouse/cover.svg"
+  cover: "imu-mouse/cover.jpg"
   alt: "Placeholder image for the IMU-Mouse project"
   tags: ["Embedded", "Assistive tech", "HCI"]
   link:
