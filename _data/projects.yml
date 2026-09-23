@@ -105,3 +105,20 @@
     - label: "Read the paper"
       url: "https://doi.org/10.22430/22565337.727"
 
+- title: "Mechanical design of a robot for pipe inspection"
+  year: "2016"
+  summary: >-
+    Final project to earn the degree in Mechatronics Engineering. I contributed to the design of the main body with the transmission system to the six wheels, as well as the design of the upper detachable body to elevate the camera. Once the upper body was detached, the camera could be assembled on the front of the main body.
+  cover: "inspection_robot/ir_render.jpeg"
+  alt: "Rendered view of the pipe-inspection robot"
+  tags: ["SolidWorks", "Mechanical design"]
+  gallery:
+    - src: "inspection_robot/ir_built.jpg"
+      alt: "Main components of the inspection robot assembled"
+      caption: "Main components of the inspection robot put together."
+    - src: "inspection_robot/gear_system_01.jpg"
+      alt: "Exploded view of the gear system"
+      caption: "Exploded view of the gear system."
+    - src: "inspection_robot/gear_system_02.jpg"
+      alt: "Rendered view of the gear system"
+      caption: "Rendered view of the gear system."
