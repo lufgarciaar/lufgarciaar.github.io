@@ -44,7 +44,7 @@
 - title: "Electronics designed for an EMG hand prosthesis — Cybathlon 2024"
   year: "2024"
   summary: >-
-    I developed the electronics to collect the signals from the sensors in the fingers and a power circuit board to deliver 12 V to the DC motors from the 7.4 V (nominal) of the batteries. The prosthesis was used by the team of the University of Groningen in the Cybathlon competition of 2024. This edition was organized by ETH Zurich in the Swiss Arena.
+    I developed the electronics to collect the signals from the sensors in the hand and a power circuit board to deliver 12 V to the DC motors from the 7.4 V (nominal) of the batteries. The prosthesis was used by the team of the University of Groningen in the Cybathlon competition of 2024. This edition was organized by ETH Zurich in the Swiss Arena.
   cover: "cybathlon/cybathlon_power_debug.png"
   alt: "Power electronics board for the hand prosthesis, on a lab bench during debugging"
   tags: ["KiCAD", "Circuit design", "Electronics debugging"]
@@ -55,6 +55,19 @@
     - src: "cybathlon/cybathlon_sensors_debug.jpg"
       alt: "Socket and hand testing in the laboratory"
       caption: "Debug of EMG recording board in the socket and communication with the board in the hand."
+
+- title: "Information systems for weather data"
+  year: "2020 — 2022"
+  summary: >-
+    In this project, Led a 5-person team in developing new versions of 3 web apps to replace monolithic versions. We implemented Docker containers and a CD strategy.
+  cover: "cdiac/cdiac_geoportal.png"
+  alt: "UI of the real time weather app of Caldas, Colombia"
+  tags: ["Technical project leadership", "Git workflows"]
+  links:
+    - label: "Real time information system"
+      url: "https://cdiac.manizales.unal.edu.co/geoportal-simac/"
+    - label: "Access the time series"
+      url: "https://cdiac.manizales.unal.edu.co/sistema-indicadores/"
 
 - title: "Assistive technologies for human-computer interaction"
   year: "2020 — 2021"
